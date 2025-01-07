@@ -1,0 +1,187 @@
+<html>
+  <head>
+    <title>Oritza Ranking</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+
+    <script async defer src="./src/credencial.js"></script>
+
+    <script
+      async
+      defer
+      src="https://apis.google.com/js/api.js"
+      id="gapi"
+      onload="gapiLoaded()"
+    ></script>
+    <script
+      async
+      defer
+      src="https://accounts.google.com/gsi/client"
+      id="gis"
+      onload="gisLoaded()"
+    ></script>
+    <script async defer src="./src/sheets.js"></script>
+  </head>
+
+  <body>
+    <h1>Lista de Películas</h1>
+
+    <button id="actualizar-datos">Actualizar datos</button>
+
+    <script>
+      document
+        .getElementById("actualizar-datos")
+        .addEventListener("click", () => {
+          console.log("Actualizando datos manualmente...");
+          // Aquí llamas a tu función de actualización
+          getPeliculas();
+        });
+    </script>
+
+    <style>
+      #actualizar-datos {
+        position: fixed;
+        top: 20px; /* Distancia desde la parte superior */
+        right: 20px; /* Distancia desde el lado derecho */
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-family: Arial, sans-serif;
+        z-index: 1000; /* Asegura que esté encima de otros elementos */
+      }
+
+      #actualizar-datos:hover {
+        background-color: #0056b3;
+      }
+    </style>
+
+    <!-- Contenedores para las secciones -->
+    <div class="P99">
+      <section id="puntaje-9-9">
+        <h2>Puntaje: 9.9</h2>
+        <div class="peliculas-container"></div>
+      </section>
+    </div>
+
+    <div class="P95">
+      <section id="puntaje-9-5">
+        <h2>Puntaje: 9.5</h2>
+        <div class="peliculas-container"></div>
+      </section>
+    </div>
+
+    <div class="P90">
+      <section id="puntaje-9-0">
+        <h2>Puntaje: 9.0</h2>
+        <div class="peliculas-container"></div>
+      </section>
+    </div>
+
+    <div class="P85">
+      <section id="puntaje-8-5">
+        <h2>Puntaje: 8.5</h2>
+        <div class="peliculas-container"></div>
+      </section>
+    </div>
+
+    <div class="P80">
+      <section id="puntaje-8-0">
+        <h2>Puntaje: 8.0</h2>
+        <div class="peliculas-container"></div>
+      </section>
+    </div>
+
+    <div class="P75">
+      <section id="puntaje-7-5">
+        <h2>Puntaje: 7.5</h2>
+        <div class="peliculas-container"></div>
+      </section>
+    </div>
+
+    <div class="P70">
+      <section id="puntaje-7-0">
+        <h2>Puntaje: 7.0</h2>
+        <div class="peliculas-container"></div>
+      </section>
+    </div>
+
+    <div class="P65">
+      <section id="puntaje-6-5">
+        <h2>Puntaje: 6.5 o menor</h2>
+        <div class="peliculas-container"></div>
+      </section>
+    </div>
+
+    <div class="PDC">
+      <section id="otro">
+        <h2>Otros</h2>
+        <div class="peliculas-container"></div>
+      </section>
+    </div>
+  </body>
+
+  <button id="authorize_button" onclick="handleAuthClick()">Entrar</button>
+  <button id="signout_button" onclick="handleSignoutClick()">Salir D:</button>
+
+  <div id="cards-container"></div>
+
+  <!-- Javonoso -->
+  <div class="card1">
+    <div class="border1"></div>
+    <div class="content1">
+      <div class="logo1">
+        <div class="logo11">
+          <svg
+            viewBox="0 0 29.667 31.69"
+            xmlns="http://www.w3.org/2000/svg"
+            id="logo-main"
+          >
+            <path
+              transform="translate(0 0)"
+              d="M12.827,1.628A1.561,1.561,0,0,1,14.31,0h2.964a1.561,1.561,0,0,1,1.483,1.628v11.9a9.252,9.252,0,0,1-2.432,6.852q-2.432,2.409-6.963,2.409T2.4,20.452Q0,18.094,0,13.669V1.628A1.561,1.561,0,0,1,1.483,0h2.98A1.561,1.561,0,0,1,5.947,1.628V13.191a5.635,5.635,0,0,0,.85,3.451,3.153,3.153,0,0,0,2.632,1.094,3.032,3.032,0,0,0,2.582-1.076,5.836,5.836,0,0,0,.816-3.486Z"
+              data-name="Path 6"
+              id="Path_6"
+            ></path>
+            <path
+              transform="translate(-45.91 0)"
+              d="M75.207,20.857a1.561,1.561,0,0,1-1.483,1.628h-2.98a1.561,1.561,0,0,1-1.483-1.628V1.628A1.561,1.561,0,0,1,70.743,0h2.98a1.561,1.561,0,0,1,1.483,1.628Z"
+              data-name="Path 7"
+              id="Path_7"
+            ></path>
+            <path
+              transform="translate(0 -51.963)"
+              d="M0,80.018A1.561,1.561,0,0,1,1.483,78.39h26.7a1.561,1.561,0,0,1,1.483,1.628v2.006a1.561,1.561,0,0,1-1.483,1.628H1.483A1.561,1.561,0,0,1,0,82.025Z"
+              data-name="Path 8"
+              id="Path_8"
+            ></path>
+          </svg>
+        </div>
+        <div class="logo21">
+          <svg
+            viewBox="0 0 101.014 23.535"
+            xmlns="http://www.w3.org/2000/svg"
+            id="logo-second"
+          >
+            <g transform="translate(-1029.734 -528.273)">
+              <path
+                transform="translate(931.023 527.979)"
+                d="M109.133,14.214l3.248-11.706A1.8,1.8,0,0,1,114.114,1.2h2.229a1.789,1.789,0,0,1,1.7,2.358L111.884,21.71a1.8,1.8,0,0,1-1.7,1.216h-3a1.8,1.8,0,0,1-1.7-1.216L99.317,3.554a1.789,1.789,0,0,1,1.7-2.358h2.229a1.8,1.8,0,0,1,1.734,1.312l3.248,11.706a.468.468,0,0,0,.9,0Z"
+                data-name="Path 1"
+                id="Path_1"
+              ></path>
+              <!-- Más contenido aquí -->
+            </g>
+          </svg>
+        </div>
+        <span class="trail1"></span>
+      </div>
+      <span class="logo-bottom-text1">uiverse.io</span>
+    </div>
+    <span class="bottom-text1">universe of ui</span>
+  </div>
+  <!-- Javonoso -->
+</html>
