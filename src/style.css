@@ -1,14 +1,27 @@
 body {
   background-color: #1b1b1b;
-  color: #ffffff;
+  font-family: "Arial Black", Arial, sans-serif;
 }
 
+
+.card {
+  overflow: visible;
+  width: 190px;
+  height: 254px;
+  padding: 10px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  
+}
 
 
 .tarjeta {
   border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
+  padding: 5px;
+  margin: 5px;
   cursor: pointer;
 }
 
@@ -23,25 +36,18 @@ body {
 /* TARJETA */ /* TARJETA */ /* TARJETA */ /* TARJETA */
 /* TARJETA */ /* TARJETA */ /* TARJETA */ /* TARJETA */
 /* TARJETA */ /* TARJETA */ /* TARJETA */ /* TARJETA */
-/* From Uiverse.io by ElSombrero2 */
-.card {
-  overflow: visible;
-  width: 190px;
-  height: 254px;
 
-  
-}
 
 .back-content img {
   width: 100%; 
   height: 100%; 
-  border-radius: 4px; /* Opcional: esquinas redondeadas */
+  border-radius: 4px; 
 }
 
 .front-content img {
   width: 100%; 
   height: 100%; 
-  border-radius: 4px; /* Opcional: esquinas redondeadas */
+  border-radius: 4px; 
 }
 
 
@@ -95,13 +101,15 @@ body {
   animation: rotation_481 5000ms infinite linear;
 }
 
+
+
 .back-content {
   position: absolute;
-  width: 95%;
-  height: 98%;
+  width: 96%;
+  height: 97%;
   background-color: #151515;
   border-radius: 5px;
-  color: white;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,7 +148,7 @@ body {
 }
 
 .front-content .badge {
-  margin: 10px; /* Ajusta el margen del año */
+  margin: 10px;
   background-color: #00000055;
   padding: 2px 5px;
   border-radius: 10px;
@@ -158,15 +166,10 @@ body {
 
 }
 
-.title {
-  font-size: 15px;
-  max-width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
+
 
 .title p {
-  width: 70%;
+  width: 80%;
 }
 
 .card-footer {
@@ -175,6 +178,7 @@ body {
   font-size: 11px;
   margin-bottom: 15px;
   margin-left: 5px;
+  margin-right: 15px;
 }
 
 .front .img {
@@ -244,8 +248,8 @@ body {
 .peliculas-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
+  justify-content: center; 
+  align-items: center; 
   gap: 1rem;
 }
 
@@ -258,85 +262,27 @@ body {
 
 /* SECCIONES *//* SECCIONES */ /* SECCIONES */ /* SECCIONES */
 
-.P99 {
-  background-color: #e81d62;
+.PROJO{
+  border-color: #e81c63;
+
+  border-width: 5px;
+  border-style: solid;
   color: white;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Borde negro */
+  padding: 5%;
+  border-radius: 15px;
+  margin: 30px;
+  
 }
 
-.P95 {
-  background-color: #ec4379;
+.PBLANCO {
+  border-color: #FFFFFF;
+  border-width: 5px;
+  border-style: solid;
   color: white;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-.P90 {
-  background-color: #f26690;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-.P85 {
-  background-color: #f688a7;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-.P80 {
-  background-color: #f9aabf;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-.P75 {
-  background-color: #fcccd7;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-.P70 {
-  background-color: #ffdfe7;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-.P65 {
-  background-color: #ffeef2;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-.PDC {
-  background-color: #ffeef2;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  padding: 5%;
+  border-radius: 15px;
+  margin: 30px;
+  
 }
 
 
@@ -353,5 +299,80 @@ body {
 
 
 
-/* JAVONOSO */ /* JAVONOSO */ /* JAVONOSO */ /* JAVONOSO */ 
+/* DESGLOSE */ /* DESGLOSE */ /* DESGLOSE */ /* DESGLOSE */ 
+details {
+  overflow: hidden;
+  background-color: #e81c63;
+  border-radius: 5px;
+}
 
+details[open] {
+  background-color: #ffffff;
+}
+
+summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+details[open] summary {
+  border-radius: 5px 5px 0 0;
+  transition: color 0.5s;
+  color: #e81c63;
+}
+
+summary::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 10px solid #ffffff; 
+  border-inline: 7px solid transparent;
+  transition: 0.2s;
+  margin-left: auto; 
+}
+
+details[open] > summary::after {
+  border-top-color: #e81c63;
+  transform: rotate(-180deg); 
+  transition: 0.2s;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* DESGLOSE */ /* DESGLOSE */ /* DESGLOSE */ /* DESGLOSE */ 
+
+
+
+/* BOTON ADICIONAL ACTUALIZOAR DATOS */ 
+
+   #actualizar-datos {
+        position: fixed;
+        top: 20px;
+        right: 20px; 
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-family: Arial, sans-serif;
+        z-index: 1000; 
+      }
+
+      #actualizar-datos:hover {
+        background-color: #0056b3;
+      }
+
+/* BOTON ADICIONAL ACTUALIZOAR DATOS */ 
