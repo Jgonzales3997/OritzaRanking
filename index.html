@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Oritza Ranking</title>
@@ -33,97 +34,155 @@
   <!-- iGNORAR LO DE ARRIIBA -->
 
   <body>
-    <button id="actualizar-datos">Actualizar datos</button>
+    <div id="pantalla-inicial">
+      <div class="perdonsito">
+        <div class="div1">
+          <h1>Disclaimer</h1>
+          <p id="text">
+            Este es un ranking personal de peliculas ambientadas en la segunda
+            guerra mundial, obviamente no se hace apologia a ninguna ideologia.
+            Es un periodo de la historia de la humanidad muy crudo, con
+            historias muy fuertes y hasta extremas que a lo mejor pudieron ser
+            realidad
+          </p>
+          <button id="actualizar-datos">Ver ranking personal D:</button>
+        </div>
+        <div class="div2">
+          <h3>Guia</h3>
+          <div class="card">
+            <div class="content">
+              <div class="back">
+                <div class="back-content">
+                  <img
+                    src="https://media1.tenor.com/m/tw2n_40V3_0AAAAd/gatito-llorando.gif"
+                    alt="Póster no disponible"
+                    class="rounded-lg w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div class="front">
+                <div class="front-content">
+                  <img
+                    src="https://media1.tenor.com/m/tw2n_40V3_0AAAAd/gatito-llorando.gif"
+                    alt="Póster no disponible"
+                    class="rounded-lg w-full h-full object-cover"
+                  />
+                </div>
+                <div class="front-content">
+                  <small class="badge">El año que salio</small>
+                  <div class="description">
+                    <div class="title">
+                      <p class="title">
+                        <strong> Nombre de la pelicula</strong>
+                      </p>
+                    </div>
+                    <p class="card-footer">
+                      Duracion | Personaje y/o evento real (si lo hubiera)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div id="contenido" class="loading">
+      <!-- Contenedores para las secciones -->
+
+      <div class="PROJO">
+        <details>
+          <summary>Puntaje 9.9</summary>
+          <section id="puntaje-9-9">
+            <div class="peliculas-container"></div>
+          </section>
+        </details>
+      </div>
+
+      <div class="PBLANCO">
+        <details>
+          <summary>Puntaje 9.5</summary>
+          <section id="puntaje-9-5">
+            <div class="peliculas-container"></div>
+          </section>
+        </details>
+      </div>
+
+      <div class="PROJO">
+        <details>
+          <summary>Puntaje 9.0</summary>
+          <section id="puntaje-9-0">
+            <div class="peliculas-container"></div>
+          </section>
+        </details>
+      </div>
+
+      <div class="PBLANCO">
+        <details>
+          <summary>Puntaje 8.5</summary>
+          <section id="puntaje-8-5">
+            <div class="peliculas-container"></div>
+          </section>
+        </details>
+      </div>
+
+      <div class="PROJO">
+        <details>
+          <summary>Puntaje 8.0</summary>
+          <section id="puntaje-8-0">
+            <div class="peliculas-container"></div>
+          </section>
+        </details>
+      </div>
+
+      <div class="PBLANCO">
+        <details>
+          <summary>Puntaje 7.5</summary>
+          <section id="puntaje-7-5">
+            <div class="peliculas-container"></div>
+          </section>
+        </details>
+      </div>
+
+      <div class="PROJO">
+        <details>
+          <summary>Puntaje 7.0</summary>
+          <section id="puntaje-7-0">
+            <div class="peliculas-container"></div>
+          </section>
+        </details>
+      </div>
+
+      <div class="PBLANCO">
+        <details>
+          <summary>Puntaje 6.5 a menos</summary>
+          <section id="puntaje-6-5">
+            <div class="peliculas-container"></div>
+          </section>
+        </details>
+      </div>
+
+      <div class="PROJO">
+        <details>
+          <summary>Documentales</summary>
+          <section id="otro">
+            <div class="peliculas-container"></div>
+          </section>
+        </details>
+      </div>
+    </div>
     <script src="./src/botoncarga.js"></script>
-
-    <!-- Contenedores para las secciones -->
-    <div class="PROJO">
-      <details name="exclusive" open>
-        <summary>Puntaje 9.9</summary>
-        <section id="puntaje-9-9">
-          <div class="peliculas-container"></div>
-        </section>
-      </details>
-    </div>
-
-    <div class="PBLANCO">
-      <details name="exclusive" open>
-        <summary>Puntaje 9.5</summary>
-        <section id="puntaje-9-5">
-          <div class="peliculas-container"></div>
-        </section>
-      </details>
-    </div>
-
-    <div class="PROJO">
-      <details name="exclusive" open>
-        <summary>Puntaje 9.0</summary>
-        <section id="puntaje-9-0">
-          <div class="peliculas-container"></div>
-        </section>
-      </details>
-    </div>
-
-    <div class="PBLANCO">
-      <details name="exclusive" open>
-        <summary>Puntaje 8.5</summary>
-        <section id="puntaje-8-5">
-          <div class="peliculas-container"></div>
-        </section>
-      </details>
-    </div>
-
-    <div class="PROJO">
-      <details name="exclusive" open>
-        <summary>Puntaje 8.0</summary>
-        <section id="puntaje-8-0">
-          <div class="peliculas-container"></div>
-        </section>
-      </details>
-    </div>
-
-    <div class="PBLANCO">
-      <details name="exclusive" open>
-        <summary>Puntaje 7.5</summary>
-        <section id="puntaje-7-5">
-          <div class="peliculas-container"></div>
-        </section>
-      </details>
-    </div>
-
-    <div class="PROJO">
-      <details name="exclusive" open>
-        <summary>Puntaje 7.0</summary>
-        <section id="puntaje-7-0">
-          <div class="peliculas-container"></div>
-        </section>
-      </details>
-    </div>
-
-    <div class="PBLANCO">
-      <details name="exclusive" open>
-        <summary>Puntaje 6.5 a menos</summary>
-        <section id="puntaje-6-5">
-          <div class="peliculas-container"></div>
-        </section>
-      </details>
-    </div>
-
-    <div class="PROJO">
-      <details name="exclusive" open>
-        <summary>Documentales</summary>
-        <section id="otro">
-          <div class="peliculas-container"></div>
-        </section>
-      </details>
-    </div>
+    <script src="src/texto.js"></script>
   </body>
 
   <!-- Contenedores para las secciones -->
 
+  <!-- Botones en caso necesitar credenciales de credencia.js
   <button id="authorize_button" onclick="handleAuthClick()">Entrar</button>
   <button id="signout_button" onclick="handleSignoutClick()">Salir D:</button>
+
+   -->
 
   <!-- Javonoso -->
 

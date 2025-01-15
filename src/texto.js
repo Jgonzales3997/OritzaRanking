@@ -2,25 +2,22 @@ var text = document.getElementById("text");
 var newDom = "";
 var animationDelay = 6;
 
-// Dividir el texto en palabras
-var words = text.innerText.split(" ");
+var words = text.innerText.split(" "); // Dividimos el texto en palabras
 
 for (let i = 0; i < words.length; i++) {
-  // Crear un span para cada palabra
   newDom +=
     '<span class="word">' +
     words[i]
-      .split("") // Dividir cada palabra en caracteres
+      .split("")
       .map((char) =>
         char === " " ? "&nbsp;" : `<span class="char">${char}</span>`
       )
       .join("") +
-    "</span>&nbsp;"; // Agregar espacio entre palabras
+    "</span>&nbsp;";
 }
 
 text.innerHTML = newDom;
 
-// Seleccionar todos los caracteres para animarlos
 var chars = text.querySelectorAll(".char");
 
 chars.forEach((char, i) => {

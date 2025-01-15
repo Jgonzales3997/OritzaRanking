@@ -16,30 +16,14 @@
     <link rel="stylesheet" href="pru.css" />
   </head>
   <body>
-    <h1>Sliding in the contents of the <code>details</code> element</h1>
+    <div class="center">
+      <p id="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+        incidunt praesentium, rerum voluptatem in reiciendis officia harum
+        repudiandae tempore suscipit ex ea, adipisci ab porro.
+      </p>
+    </div>
 
-    <details>
-      <summary>Click me</summary>
-      <article>
-        <pre><code>details {
-  overflow: hidden;
-}
-
-details[open] article {
-  animation: animateUp .5s linear forwards;
-}
-
-@keyframes animateUp {
-  0% {
-    opacity: 0;
-    transform: translatey(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translatey(0);
-  }
-}</code></pre>
-      </article>
-    </details>
+    <script src="pru.js"></script>
   </body>
 </html>

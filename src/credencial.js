@@ -57,6 +57,8 @@ function gisLoaded() {
 /**
  * Enables user interaction after all libraries are loaded.
  */
+
+/** Para credenciales en caos de ingreso mediante cuenta- 
 function maybeEnableButtons() {
   if (gapiInited && gisInited) {
     document.getElementById("authorize_button").style.visibility = "visible";
@@ -66,6 +68,7 @@ function maybeEnableButtons() {
 /**
  *  Sign in the user upon button click.
  */
+/** Para credenciales en caos de ingreso mediante cuenta- 
 function handleAuthClick() {
   tokenClient.callback = async (resp) => {
     if (resp.error !== undefined) {
@@ -89,6 +92,7 @@ function handleAuthClick() {
 /**
  *  Sign out the user upon button click.
  */
+/** Para credenciales en caos de ingreso mediante cuenta- 
 function handleSignoutClick() {
   const token = gapi.client.getToken();
   if (token !== null) {

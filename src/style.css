@@ -1,7 +1,174 @@
 body {
   background-color: #1b1b1b;
-  font-family: "Arial Black", Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
+
+
+/* Primera imagen *//* Primera imagen *//* Primera imagen *//* Primera imagen */
+
+.perdonsito {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  
+  
+
+
+  }
+
+  .div1 { grid-area: 2 / 2 / 9 / 6;
+  margin:30px
+ }
+  .div2 {
+    grid-area: 2 / 6 / 9 / 9; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    
+    padding: 10px;
+    box-sizing: border-box; 
+  }
+  
+  .div2 h3 {
+    margin: 0 0 10px 0; 
+    font-size: 20px; /* Tamaño del texto */
+    color: #ffffff; /* Color del texto */
+  }
+
+.perdonsito h1 {
+    color: #d3d3d3; 
+    font-size: 40px; 
+    line-height: 1.5; 
+    margin-top: 10px; 
+   
+    
+  }
+  .perdonsito .div1 p {
+    color: #ffffff; /* Cambia el color del texto */
+    font-size: 15px; /* Ajusta el tamaño de la fuente */
+    line-height: 1.5; /* Espaciado entre líneas */
+    margin-top: 5px; /* Espaciado superior */
+    display: block;
+    text-align: left;
+    word-wrap: break-word
+
+  }
+
+/* Contenedor principal del contenido inicial */
+#pantalla-inicial {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1b1b1b;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+/* Pantalla inicial desvanecida */
+#pantalla-inicial.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Contenedor del contenido desbloqueado */
+/* Contenedor del contenido desbloqueado */
+#contenido {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transform: translateY(-20%); /* Inicia desplazado hacia arriba */
+  transition: opacity 0.5s ease, height 0.5s ease, transform 0.5s ease;
+}
+
+/* Mostrar contenido completo */
+#contenido.show {
+  opacity: 1;
+  height: auto;
+  transform: translateY(0); /* Desplaza hacia su posición final */
+}
+
+
+/* Mostrar contenido completo */
+#contenido.show {
+  opacity: 1;
+  height: auto;
+  transform: translateY(0); /* Desplaza hacia su posición final */
+}
+
+  
+/* TEXTO ANIMAO *//* TEXTO ANIMAO *//* TEXTO ANIMAO */
+
+#text {
+
+}
+.char {
+
+  animation: an 1s ease-out 1 both;
+  display: inline-block;
+}
+
+.word {
+  display: inline-block; /* Mantiene las palabras completas */
+  white-space: nowrap; /* Evita que se rompan en varias líneas */
+}
+
+@keyframes an{
+  from{
+      opacity: 0;
+      transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+  }
+  to{
+      opacity: 1;
+      transform: perspective(500px) translate3d(0, 0, 0);
+  }
+}
+
+/* TEXTO ANIMAO *//* TEXTO ANIMAO *//* TEXTO ANIMAO */
+  
+  
+  
+
+/* Primera imagen *//* Primera imagen *//* Primera imagen *//* Primera imagen */
+
+
+
+/* BOTON ADICIONAL ACTUALIZOAR DATOS */ 
+#actualizar-datos {
+
+  background-color:  #e81c63;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 30px;
+
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+  transition: color 0.5s;
+  
+}
+
+
+      #actualizar-datos:hover {
+        background-color: #ffffff;
+        transition: color 0.5s;
+        color: #e81c63;
+      }
+
+/* BOTON ADICIONAL ACTUALIZOAR DATOS */ 
 
 
 .card {
@@ -14,9 +181,9 @@ body {
   flex-direction: column;
   align-items: center;
 
+
   
 }
-
 
 .tarjeta {
   border: 1px solid #ccc;
@@ -251,6 +418,7 @@ body {
   justify-content: center; 
   align-items: center; 
   gap: 1rem;
+  padding-bottom: 30px;
 }
 
 .poster-image {
@@ -311,6 +479,7 @@ details[open] {
 }
 
 summary {
+  cursor: pointer;
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -355,24 +524,3 @@ summary::-webkit-details-marker {
 
 
 
-/* BOTON ADICIONAL ACTUALIZOAR DATOS */ 
-
-   #actualizar-datos {
-        position: fixed;
-        top: 20px;
-        right: 20px; 
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-family: Arial, sans-serif;
-        z-index: 1000; 
-      }
-
-      #actualizar-datos:hover {
-        background-color: #0056b3;
-      }
-
-/* BOTON ADICIONAL ACTUALIZOAR DATOS */ 
